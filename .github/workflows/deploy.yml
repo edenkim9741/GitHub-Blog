@@ -2,7 +2,7 @@ name: Zola on GitHub Pages
 
 on:
   push:
-    branches: [ main ] # main 브랜치에 푸시될 때마다 실행됩니다.
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repositoryj
         uses: actions/checkout@v4
         with:
-          submodules: recursive # ✨가장 중요! book 테마를 가져오기 위한 설정입니다.
+          submodules: recursive 
           
       - name: Zola Install
         uses: taiki-e/install-action@v2
