@@ -1,7 +1,9 @@
 +++
 title = "Blog 시작~~"
-sort_by = "date"
 date = "2026-03-13"
+[taxonomies]
+tags = ["blog"]
+[extra]
 +++
 
 항상 블로그를 시작해야지 생각만 하다가 드디어 시작하게 되었음~~

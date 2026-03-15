@@ -1,7 +1,14 @@
 +++
-# 이 페이지에서 글 목록을 날짜순으로 정렬합니다.
-sort_by = "weight"
-
-# 하위 폴더(일상, 개발)에 있는 글들을 메인 페이지로 끌어와서 보여주려면 true로 설정합니다.
-transparent = true 
+title = "Home"
+template = "index.html"
+transparent = true
+[extra]
+profile_picture = "images/profile.png"
 +++
+
+# Eden's Blog
+GitHub Pages로 시작해보는 개인 블로그입니다. Zola의 Austere 테마를 사용했습니다.
+
+
+## Features
+- 일상 및 연구, 테크, 독후감 등을 작성할 예정

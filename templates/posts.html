@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+{{ section.content | safe }}
+
+{% if section.title == "Posts" %}
+  {% set limit = config.extra.recent_posts_limit | default(value=5) %}
+  {% set post_list = section.pages | slice(end=limit) %}
+{% else %}
+  {% set post_list = section.pages %}
+{% endif %}
+
+<ul class="p">
+  {% for post in post_list %}
+  <li>
+    {% if post.date %}
+      <time datetime="{{ post.date }}">{{ post.date | date(format='%Y-%m-%d') }}</time>
+    {% endif %}
+    <a href="{{ post.permalink | safe }}">{{ post.title }}</a>{% if post.draft %} <span class="s">(Draft)</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+<div class="categories">
+  <h2>Sections</h2>
+  <ul class="p">
+    <li>
+      <a href="{{ get_url(path='@/posts/research/_index.md') }}">Research</a>
+    </li>
+    <li>
+      <a href="{{ get_url(path='@/posts/tech/_index.md') }}">Tech</a>
+    </li>
+    <li>
+      <a href="{{ get_url(path='@/posts/life/_index.md') }}">Life</a>
+    </li>
+    <li>
+      <a href="{{ get_url(path='@/posts/bookshelf/_index.md') }}">Bookshelf</a>
+    </li>
+  </ul>
+</div>
+{% endblock content %}
