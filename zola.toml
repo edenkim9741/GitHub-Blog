@@ -1,10 +1,10 @@
 # Site title.
 title = "Eden's blog"
-theme = "austere"
+# theme = "austere"
 # Site description.
 
 # Base URL for your site.
-base_url = "https://edenkim9741.github.io/GitHub-Blog/"
+base_url = "https://edenkim9741.github.io/GitHub-Blog"
 # No SASS - CSS is internal (located in base.html template).
 compile_sass = false
 # Search index enabled.
